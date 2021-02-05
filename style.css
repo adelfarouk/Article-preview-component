@@ -1,0 +1,185 @@
+/* 
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --dark-grayish-blue: #48556a;
+    --desaturated-dark-blue: #6d7f97;
+    --grayish-blue: #9eafc2;
+    --light-grayish-blue: #ecf2f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grayish-blue);
+    padding: 15px;
+}
+
+.container {
+    max-width: 730px;
+    display: flex;
+    /* border-radius: 15px; */
+    /* overflow: hidden; */
+}
+
+.pic > img {
+    display: inline-block;
+    height: 100%;
+    width: 290px;
+    border-radius: 15px 0 0 15px;
+}
+
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 0 15px 15px 0;
+}
+
+.header {
+    color: var(--dark-grayish-blue);
+    margin-bottom: 15px;
+    letter-spacing: .5px;
+}
+
+.details {
+    font-size: 13px;
+    color: var(--desaturated-dark-blue);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.person {
+    flex-basis: 80%;
+    display: flex;
+}
+
+.person > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin-right: 15px;
+}
+
+.name h4 {
+    font-size: 14px;
+    color: var(--dark-grayish-blue)
+}
+
+.name span {
+    font-size: 13px;
+    color: var(--desaturated-dark-blue)
+}
+
+.svg {
+    display: inline-block;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    padding: 0px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative; 
+}
+
+.vg:hover {
+    background-color: var(--desaturated-dark-blue);
+}
+
+.svg svg:hover {
+    fill: #ffffff;
+}
+
+.active-state {
+    background-color: var(--dark-grayish-blue);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -200%;
+    padding: 13px 30px;
+    border-radius: 5px;
+}
+
+.active-state > span {
+    font-size: 10px;
+    color: var(--grayish-blue);
+    letter-spacing: 3px;
+}
+
+.active-state > *:not(:last-child){
+    margin-right: 9px;
+}
+
+.active-state > img {
+    width: 15px;
+}
+
+.active-state::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--dark-grayish-blue);
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    transform: translateY(50%) rotate(45deg)
+}
+
+.active-state.hidden {
+    visibility: hidden;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 15px;
+}
