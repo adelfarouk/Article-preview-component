@@ -209,7 +209,7 @@ body {
         height: 0;
     }
 
-    .active-state > * {
+    .active-state > *:not(:last-child) {
         margin-right: 30px;
     }
 
@@ -225,50 +225,14 @@ body {
 @media (max-width: 375px) {
     body {
         font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .container {
-        flex-direction: column;
-        width: 90%;
-
-    }
-
-    .pic > img {
-        width: 100%;
-        border-radius: 15px 15px 0 0;
-    }
-
-    .right {
-        margin-top: -5px;
-    }
-
-    .desc {
-        border-radius: 0 0 15px 15px;
-        padding: 25px 25px 15px;
     }
 
     .details {
         margin-bottom: 15px;
     }
 
-    .profile {
-        margin-top: 20px;
-    }
-
     .active-state {
         top: 77%;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        border-radius: 0;
-        border-radius: 0 0 15px 15px;
-    }
-
-    .active-state::before {
-        content: '';
-        width: 0;
-        height: 0;
     }
 
     .active-state > *:not(:last-child){
@@ -276,10 +240,6 @@ body {
     }
 
     .svg {
-        position: absolute;
-        z-index: 100;
         top: 12px;
-        right: 0;
-        background-color: var(--light-grayish-blue);
     }
 }
